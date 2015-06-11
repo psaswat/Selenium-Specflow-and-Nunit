@@ -82,6 +82,7 @@
       <DependentUpon>Login.feature</DependentUpon>
     </Compile>
     <Compile Include="Pages\AddVideosPage.cs" />
+    <Compile Include="Pages\VideosOwnPage.cs" />
     <Compile Include="Pages\VideosPage.cs" />
     <Compile Include="Steps\LoginSteps.cs" />
     <Compile Include="Pages\IndexPage.cs" />

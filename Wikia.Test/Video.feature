@@ -23,6 +23,6 @@ Scenario: Add video to wikia page
 	And I type the URL "https://youtu.be/etzMjoH0rJw" of the video in the Video URL box
 	And I click on Add 
 	Then I should be taken to the video page
-	And there should be a message on the top of the page saying "Video page File:The_LEGO_Movie_'Everything_is_Awesome'_Music_Video_was_added_successfully_added"
+	And there should be a message on the top of the page saying file was "successfully added"
 	And the video with title "The LEGO Movie 'Everything is Awesome' Music Video" should be added to the videos page 
-	And the video title should be the same as the file name 
+	And if I click on the flash success link then I will go to the video page with "The LEGO Movie 'Everything is Awesome' Music Video" video

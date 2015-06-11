@@ -27,10 +27,12 @@ namespace Wikia.Test.Pages
         [FindsBy(How = How.XPath, Using = "//*[@id='UserLoginDropdown']/form/fieldset/div[7]/input")]
         public IWebElement LogInButton;
 
-        [FindsBy(How = How.ClassName, Using = "")]
-        public IWebElement PasswordField;
+        [FindsBy(How = How.ClassName, Using = "wikia-menu-button contribute secondary combined")]
+        public IWebElement ContributeButton;
 
-        
+        [FindsBy(How = How.LinkText, Using = "Add a Video")]
+        public IWebElement VideoSelectionInContribute;
+
         
         //[FindsBy(How = How.LinkText, Using = "Log off")]
         //public IWebElement LogoutButton;
@@ -82,12 +84,13 @@ namespace Wikia.Test.Pages
 
         internal void ClickOnContributeButton()
         {
-            throw new NotImplementedException();
+            ContributeButton.Click();
         }
 
-        internal void SelectAddVideoFromContributeDropdown()
+        public AddVideosPage SelectAddVideoFromContributeDropdown()
         {
-            throw new NotImplementedException();
+           VideoSelectionInContribute.Click();
+           return GetInstance<AddVideosPage>(Driver);
         }
     }
 }

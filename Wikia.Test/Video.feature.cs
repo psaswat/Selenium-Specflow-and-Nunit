@@ -144,13 +144,14 @@ this.ScenarioSetup(scenarioInfo);
 #line 25
  testRunner.Then("I should be taken to the video page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 26
- testRunner.And("there should be a message on the top of the page saying \"Video page File:The_LEGO" +
-                    "_Movie_\'Everything_is_Awesome\'_Music_Video_was_added_successfully_added\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("there should be a message on the top of the page saying file was \"successfully ad" +
+                    "ded\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 27
  testRunner.And("the video with title \"The LEGO Movie \'Everything is Awesome\' Music Video\" should " +
                     "be added to the videos page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 28
- testRunner.And("the video title should be the same as the file name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("if I click on the flash success link then I will go to the video page with \"The L" +
+                    "EGO Movie \'Everything is Awesome\' Music Video\" video", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

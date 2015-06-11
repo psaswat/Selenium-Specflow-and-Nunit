@@ -12,15 +12,23 @@ namespace Wikia.Test.Pages
 {
     public class AddVideosPage:BasePage
     {
+        public override string DefaultTitle { get { return "WikiaVideoAdd - QM HomeWork Wikia"; } }
         public static string URL = "/Special:WikiaVideoAdd";
+        
+        [FindsBy(How = How.Id, Using = "wpWikiaVideoAddUrl")]
+        public IWebElement VideoURLBox;
+
+        [FindsBy(How = How.XPath, Using = "//input[@type='submit']")]
+        public IWebElement AddButton;
         internal void TypeVideoURL(string p0)
         {
-            throw new NotImplementedException();
+            VideoURLBox.SendKeys(p0);
         }
 
-        internal void ClickOnAddButton()
+        public VideosPage ClickOnAddButton()
         {
-            throw new NotImplementedException();
+            AddButton.Click();
+            return GetInstance<VideosPage>(Driver);
         }
     }
 }

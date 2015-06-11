@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using TechTalk.SpecFlow;
 using Wikia.Test.Pages;
+using NUnit.Framework;
 
 namespace Wikia.Test.Steps
 {
@@ -45,28 +46,42 @@ namespace Wikia.Test.Steps
 
 
         [Then(@"I should be taken to the video page")]
-        public void ThenIShouldBeTakenToTheVideoPage()
+        public void ThenIShouldBeTakenToAddVideoPage()
         {
-            ScenarioContext.Current.Pending();
+            CurrentPage.Is<AddVideosPage>();
         }
 
-        [Then(@"there should be a message on the top of the page saying ""(.*)""")]
-        public void ThenThereShouldBeAMessageOnTheTopOfThePageSaying(string p0)
+        [Then(@"there should be a message on the top of the page saying file was ""(.*)""")]
+        public void ThenThereShouldBeAMessageOnTheTopOfThePageSayingFileWas(string p0)
         {
-            CurrentPage.As<VideosPage>().IsSuccessMessagePresent(p0);
+            CurrentPage.As<VideosPage>().IsTextOnPage(p0);
         }
-        
+
         [Then(@"the video with title ""(.*)"" should be added to the videos page")]
         public void ThenTheVideoWithTitleShouldBeAddedToTheVideosPage(string p0)
         {
-            CurrentPage.As<VideosPage>().IsTextPresent(p0);
+            CurrentPage.As<VideosPage>().IsTextOnPage(p0);
         }
 
-        [Then(@"the video title should be the same as the file name")]
-        public void ThenTheVideoTitleShouldBeTheSameAsTheFileName()
+        [Then(@"if I click on the flash success link then I will go to the video page with ""(.*)"" video")]
+        public void ThenIfIClickOnTheFlashSuccessLinkThenIWillGoToTheVideoPageWithVideo(string p0)
         {
-            CurrentPage.As<VideosPage>().IsTitleNameSameAsFileName();
+            CurrentPage.As<VideosPage>().ClickOnSuccessMessageAndCheckVideo(p0);
+            
         }
+
+
+        //[Then(@"the video with title ""(.*)"" should be added to the videos page")]
+        //public void ThenTheVideoWithTitleShouldBeAddedToTheVideosPage(string p0)
+        //{
+        //    CurrentPage.As<VideosPage>().IsTextPresent(p0);
+        //}
+
+        //[Then(@"the video title should be the same as the file name")]
+        //public void ThenTheVideoTitleShouldBeTheSameAsTheFileName()
+        //{
+        //    CurrentPage.As<VideosPage>().IsTitleNameSameAsFileName();
+        //}
 
     }
 }
