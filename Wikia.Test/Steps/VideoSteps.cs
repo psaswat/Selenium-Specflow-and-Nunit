@@ -65,7 +65,7 @@ namespace Wikia.Test.Steps
         [Then(@"the video title should be the same as the file name")]
         public void ThenTheVideoTitleShouldBeTheSameAsTheFileName()
         {
-            ScenarioContext.Current.Pending();
+            CurrentPage.As<VideosPage>().IsTitleNameSameAsFileName();
         }
 
     }

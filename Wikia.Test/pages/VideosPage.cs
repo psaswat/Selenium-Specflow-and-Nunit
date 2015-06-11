@@ -21,5 +21,10 @@ namespace Wikia.Test.Pages
         {
             throw new NotImplementedException();
         }
+
+        internal void IsTitleNameSameAsFileName()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
