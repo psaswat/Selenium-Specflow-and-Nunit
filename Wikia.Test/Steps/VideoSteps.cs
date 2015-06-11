@@ -43,24 +43,23 @@ namespace Wikia.Test.Steps
             CurrentPage.As<AddVideosPage>().ClickOnAddButton();
         }
 
-        [Then(@"the video with title ""(.*)"" should be added to the videos page")]
-        public void ThenTheVideoWithTitleShouldBeAddedToTheVideosPage(string p0)
-        {
-            CurrentPage.As<VideosPage>().IsTextPresent(p0);
-        }
 
+        [Then(@"I should be taken to the video page")]
+        public void ThenIShouldBeTakenToTheVideoPage()
+        {
+            ScenarioContext.Current.Pending();
+        }
 
         [Then(@"there should be a message on the top of the page saying ""(.*)""")]
         public void ThenThereShouldBeAMessageOnTheTopOfThePageSaying(string p0)
         {
             CurrentPage.As<VideosPage>().IsSuccessMessagePresent(p0);
         }
-
-
-        [Then(@"I should be taken to the video page")]
-        public void ThenIShouldBeTakenToTheVideoPage()
+        
+        [Then(@"the video with title ""(.*)"" should be added to the videos page")]
+        public void ThenTheVideoWithTitleShouldBeAddedToTheVideosPage(string p0)
         {
-            ScenarioContext.Current.Pending();
+            CurrentPage.As<VideosPage>().IsTextPresent(p0);
         }
 
         [Then(@"the video title should be the same as the file name")]
