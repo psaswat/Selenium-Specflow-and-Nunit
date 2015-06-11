@@ -74,5 +74,15 @@ namespace Wikia.Test.Pages
             LogInButton.Click();
             return GetInstance<IndexPage>(Driver);
         }
+
+        internal void ClickOnContributeButton()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void SelectAddVideoFromContributeDropdown()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

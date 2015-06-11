@@ -81,9 +81,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Login.feature</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AddVideosPage.cs" />
+    <Compile Include="Pages\VideosPage.cs" />
     <Compile Include="Steps\LoginSteps.cs" />
     <Compile Include="Pages\IndexPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\VideoSteps.cs" />
     <Compile Include="Video.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
