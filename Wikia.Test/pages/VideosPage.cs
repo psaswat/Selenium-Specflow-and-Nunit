@@ -12,6 +12,7 @@ namespace Wikia.Test.Pages
 {
     public class VideosPage:BasePage
     {
+        public static string URL = "/Special:Videos";
         internal void IsTextPresent(string p0)
         {
             throw new NotImplementedException();

@@ -74,7 +74,7 @@
     <Compile Include="Base\BasePage.cs" />
     <Compile Include="Base\BasePage.Navigation..cs" />
     <Compile Include="Base\CommonBase.cs" />
-    <Compile Include="Base\FeatureBase.cs" />
+    <Compile Include="Base\BaseSteps.cs" />
     <Compile Include="Base\TextFixtureBase.cs" />
     <Compile Include="Login.feature.cs">
       <AutoGen>True</AutoGen>

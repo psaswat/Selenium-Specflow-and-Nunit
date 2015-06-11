@@ -26,6 +26,11 @@ namespace Wikia.Test.Pages
 
         [FindsBy(How = How.XPath, Using = "//*[@id='UserLoginDropdown']/form/fieldset/div[7]/input")]
         public IWebElement LogInButton;
+
+        [FindsBy(How = How.ClassName, Using = "")]
+        public IWebElement PasswordField;
+
+        
         
         //[FindsBy(How = How.LinkText, Using = "Log off")]
         //public IWebElement LogoutButton;

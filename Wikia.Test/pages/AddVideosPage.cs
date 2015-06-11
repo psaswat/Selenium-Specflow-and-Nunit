@@ -12,7 +12,7 @@ namespace Wikia.Test.Pages
 {
     public class AddVideosPage:BasePage
     {
-
+        public static string URL = "/Special:WikiaVideoAdd";
         internal void TypeVideoURL(string p0)
         {
             throw new NotImplementedException();
