@@ -11,13 +11,14 @@ namespace Wikia.Test.Steps
     [Binding]
     public class VideoSteps:BaseSteps
     {
-        [Given(@"I am logged into the wikia")]
-        public void GivenIAmLoggedIntoTheWikia()
+       
+        [Given(@"I am logged into the wikia with the username ""(.*)"" and password ""(.*)""")]
+        public void GivenIAmLoggedIntoTheWikiaWithTheUsernameAndPassword(string p0, string p1)
         {
-            CurrentPage.As<IndexPage>().EnterUserName("saswatpatnaik");
-            CurrentPage.As<IndexPage>().EnterPassword("P@ssword-1");
-            CurrentPage.As<IndexPage>().ClickLogin();
+            CurrentPage = (BasePage)BasePage.LoadLoginPage(CurrentDriver, BasePage.BaseUrl);
+            CurrentPage.As<LoginPage>().DoLogin(p0,p1);
         }
+
 
         [When(@"I Click on the contribute button")]
         public void WhenIClickOnTheContributeButton()

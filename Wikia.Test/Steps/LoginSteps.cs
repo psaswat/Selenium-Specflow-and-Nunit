@@ -53,10 +53,10 @@ namespace Wikia.Test
             
         }
 
-        [Then(@"I should not be able to see the sign in label")]
-        public void ThenIShouldNotBeAbleToSeeTheSignInLabel()
+        [Then(@"I should not see Sign In")]
+        public void ThenIShouldNotSeeSignIn()
         {
-            CurrentPage.As<IndexPage>().IsSignInLinkVisible();
+            CurrentPage.As<IndexPage>().CheckSignInLabelNotPresent();
         }
  
        

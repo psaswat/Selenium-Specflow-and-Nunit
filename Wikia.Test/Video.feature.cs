@@ -88,17 +88,18 @@ namespace Wikia.Test
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add video to wikia page")]
-        [NUnit.Framework.TestCaseAttribute("Chrome", Category="Chrome", TestName="AddVideoToWikiaPage on Chrome")]
-        public virtual void AddVideoToWikiaPage(string browser)
+        [NUnit.Framework.DescriptionAttribute("2-Add video to wikia page")]
+        [NUnit.Framework.TestCaseAttribute("Firefox", Category="Firefox", TestName="_2_AddVideoToWikiaPage on Firefox")]
+        public virtual void _2_AddVideoToWikiaPage(string browser)
         {
             InitializeSelenium(browser);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add video to wikia page", new string[] {
-                        "Browser:Chrome"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2-Add video to wikia page", new string[] {
+                        "Browser:Firefox"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.Given("I am logged into the wikia", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am logged into the wikia with the username \"saswatpatnaik\" and password \"P@sswo" +
+                    "rd-1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
  testRunner.When("I Click on the contribute button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
@@ -111,24 +112,26 @@ this.ScenarioSetup(scenarioInfo);
 #line 13
  testRunner.Then("I should be taken to the video page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 14
- testRunner.And("there should be a message on the top of the page saying \"Video page File:Minions_" +
-                    "Banana_Song_Full_Song_was_added_successfully_added\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("there should be a message on the top of the page saying file was \"successfully ad" +
+                    "ded\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
  testRunner.And("the video with title \"Minions Banana Song Full Song\" should be added to the video" +
                     "s page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
- testRunner.And("the video title should be the same as the file name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("if I click on the flash success link then I will go to the video page with \"Minio" +
+                    "ns Banana Song Full Song\" video", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add second video to wikia page")]
-        [NUnit.Framework.CategoryAttribute("Broweser:Chrome")]
-        public virtual void AddSecondVideoToWikiaPage()
+        [NUnit.Framework.DescriptionAttribute("3-Add second video to wikia page")]
+        [NUnit.Framework.TestCaseAttribute("Chrome", Category="Chrome", TestName="_3_AddSecondVideoToWikiaPage on Chrome")]
+        public virtual void _3_AddSecondVideoToWikiaPage(string browser)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add second video to wikia page", new string[] {
-                        "Broweser:Chrome"});
+            InitializeSelenium(browser);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3-Add second video to wikia page", new string[] {
+                        "Browser:Chrome"});
 #line 19
  this.ScenarioSetup(scenarioInfo);
 #line 20

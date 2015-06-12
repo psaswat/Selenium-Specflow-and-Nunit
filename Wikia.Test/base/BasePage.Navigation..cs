@@ -26,5 +26,12 @@ public abstract partial class BasePage
         driver.Navigate().GoToUrl(baseURL.TrimEnd(new char[] { '/' }) + IndexPage.URL);
         return GetInstance<IndexPage>(driver, baseURL, "");
     }
+    public static LoginPage LoadLoginPage(IWebDriver driver,string baseURL)
+    {
+        if (driver == null)
+            driver = Browser.Current;
+        driver.Navigate().GoToUrl(baseURL.TrimEnd(new char[] { '/' }) + LoginPage.URL);
+        return GetInstance<LoginPage>(driver, baseURL, "");
+    }
 }
 }

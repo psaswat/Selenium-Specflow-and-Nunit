@@ -88,12 +88,12 @@ namespace Wikia.Test
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Login into the QM Homework wikia")]
-        [NUnit.Framework.TestCaseAttribute("Chrome", Category="Chrome", TestName="LoginIntoTheQMHomeworkWikia on Chrome")]
-        public virtual void LoginIntoTheQMHomeworkWikia(string browser)
+        [NUnit.Framework.DescriptionAttribute("1-Login into the QM Homework wikia")]
+        [NUnit.Framework.TestCaseAttribute("Chrome", Category="Chrome", TestName="_1_LoginIntoTheQMHomeworkWikia on Chrome")]
+        public virtual void _1_LoginIntoTheQMHomeworkWikia(string browser)
         {
             InitializeSelenium(browser);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login into the QM Homework wikia", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1-Login into the QM Homework wikia", new string[] {
                         "Browser:Chrome"});
 #line 8
 this.ScenarioSetup(scenarioInfo);
@@ -112,7 +112,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 15
  testRunner.Then("I should be logged in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 16
- testRunner.And("I should not be able to see the sign in label", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I should not see Sign In", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
