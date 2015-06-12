@@ -27,7 +27,7 @@ PLease place a chromedriver.exe in the bin/debug folder of the compiled solution
 
 Open Test Explorer in Visual Studio(Test>Windows>Test Explorer). 
 
-Tests should The tests should show up . The tests are generated from the scenarios in the Login.Feature and Video.Feature files in the project. 
+The tests should show up . The tests are generated from the scenarios in the Login.Feature and Video.Feature files in the project. 
 
 Instructions to run this from command line after the tests are generated :
 
