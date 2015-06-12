@@ -11,6 +11,7 @@ After downloading the solution open it in a visual studio instance.(preferably V
 
 Install the following plugins via Tools > Extensions and Updates(If not already installed) 
 
+NUGet Package manager 
 Specflow
 NUnit Test Adapter
 
@@ -18,7 +19,11 @@ Download NUnit msi and install it (if not already present)
 http://github.com/nunit/nunitv2/releases/download/2.6.4/NUnit-2.6.4.msi
 
 
-After the plugins are installed build the solution.While building the packages required should be automatically downloaded and assocated with the test. 
+After the plugins are installed build the solution.
+
+While building the packages required should be automatically downloaded and assocated with the test. 
+
+PLease place a chromedriver.exe in the bin/debug folder of the compiled solution . Somehow having in the path was not working for this specific instance. 
 
 Open Test Explorer in Visual Studio(Test>Windows>Test Explorer). 
 
@@ -37,6 +42,7 @@ This should run all the tests.
 
 
 Here are the list of things I can immediately think of that needs improvement and I would most likely work on if its ok to continue working . 
+- The test environment was acting a bit crazy yesterday(so some parts might not be robust as I could not do a test run). I dont know if that was intentional. I mught need to run through them a few more times . 
 - Fix the chrome driver 
 - Would like to implement the hover better- Its quick and dirty now
 - Handle the underscore present or not string better in the FileName
