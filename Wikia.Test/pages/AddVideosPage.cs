@@ -18,17 +18,17 @@ namespace Wikia.Test.Pages
         [FindsBy(How = How.Id, Using = "wpWikiaVideoAddUrl")]
         public IWebElement VideoURLBox;
 
-        [FindsBy(How = How.XPath, Using = "//input[@type='submit']")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='mw-content-text']/form/div/input")]
         public IWebElement AddButton;
         internal void TypeVideoURL(string p0)
         {
             VideoURLBox.SendKeys(p0);
         }
 
-        public AddVideosPage ClickOnAddButton()
+        public VideosPage ClickOnAddButton()
         {
             AddButton.Click();
-            return GetInstance<AddVideosPage>(Driver);
+            return GetInstance<VideosPage>(Driver);
         }
     }
 }

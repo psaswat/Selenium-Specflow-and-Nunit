@@ -53,7 +53,7 @@ namespace Wikia.Test.Steps
         [Then(@"I should be taken to the video page")]
         public void ThenIShouldBeTakenToVideosPage()
         {
-            //CurrentPage.Is<VideosPage>();
+            CurrentPage.Is<VideosPage>();
         }
 
         [Then(@"there should be a message on the top of the page saying file was ""(.*)""")]
