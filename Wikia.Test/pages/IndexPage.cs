@@ -31,8 +31,12 @@ namespace Wikia.Test.Pages
         [FindsBy(How = How.ClassName, Using = "links-container")]
         public IWebElement Avatar;
 
-        [FindsBy(How = How.LinkText, Using = "Contribute")]
+        //[FindsBy(How = How.LinkText, Using = "Contribute")]
+        //public IWebElement ContributeButton;
+
+        [FindsBy(How = How.XPath, Using = "//*[@id='WikiHeader']/div[1]/nav")]
         public IWebElement ContributeButton;
+        
 
         [FindsBy(How = How.LinkText, Using = "Add a Video")]
         public IWebElement VideoSelectionInContribute;
@@ -89,15 +93,23 @@ namespace Wikia.Test.Pages
 
         public IndexPage ClickLogin()
         {
-            LogInButton.Click();
+            LogInButton.SendKeys(Keys.Return);
+            //LogInButton.Click();
             return GetInstance<IndexPage>(Driver);
         }
 
         internal void ClickOnContributeButton()
         {
+            WaitUpTo(10000,ContributeButtonVisible, "Waiting for contribute button to be displayed");
             ContributeButton.Click();
         }
 
+        private bool ContributeButtonVisible()
+        {
+           return ContributeButton.Displayed;
+        }
+
+       
         public AddVideosPage SelectAddVideoFromContributeDropdown()
         {
            VideoSelectionInContribute.Click();

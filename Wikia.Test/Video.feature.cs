@@ -89,12 +89,12 @@ namespace Wikia.Test
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("2-Add video to wikia page")]
-        [NUnit.Framework.TestCaseAttribute("Firefox", Category="Firefox", TestName="_2_AddVideoToWikiaPage on Firefox")]
+        [NUnit.Framework.TestCaseAttribute("Chrome", Category="Chrome", TestName="_2_AddVideoToWikiaPage on Chrome")]
         public virtual void _2_AddVideoToWikiaPage(string browser)
         {
             InitializeSelenium(browser);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2-Add video to wikia page", new string[] {
-                        "Browser:Firefox"});
+                        "Browser:Chrome"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
@@ -135,7 +135,8 @@ this.ScenarioSetup(scenarioInfo);
 #line 19
  this.ScenarioSetup(scenarioInfo);
 #line 20
- testRunner.Given("I am logged into the wikia", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am logged into the wikia with the username \"saswatpatnaik\" and password \"P@sswo" +
+                    "rd-1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 21
  testRunner.When("I Click on the contribute button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 22

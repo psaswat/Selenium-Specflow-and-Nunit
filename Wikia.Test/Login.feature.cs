@@ -90,28 +90,30 @@ namespace Wikia.Test
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("1-Login into the QM Homework wikia")]
         [NUnit.Framework.TestCaseAttribute("Chrome", Category="Chrome", TestName="_1_LoginIntoTheQMHomeworkWikia on Chrome")]
+        [NUnit.Framework.TestCaseAttribute("IE", Category="IE", TestName="_1_LoginIntoTheQMHomeworkWikia on IE")]
         public virtual void _1_LoginIntoTheQMHomeworkWikia(string browser)
         {
             InitializeSelenium(browser);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1-Login into the QM Homework wikia", new string[] {
-                        "Browser:Chrome"});
-#line 8
-this.ScenarioSetup(scenarioInfo);
+                        "Browser:Chrome",
+                        "Browser:IE"});
 #line 9
- testRunner.Given("I am on the QM Homework wikia", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 10
- testRunner.And("I am not logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I am on the QM Homework wikia", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 11
- testRunner.When("I hover over over the Sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I am not logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
- testRunner.And("I enter \"saswatpatnaik\" into the username column", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I hover over over the Sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
- testRunner.And("I enter \"P@ssword-1\" into the password column", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I enter \"saswatpatnaik\" into the username column", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
- testRunner.And("I click the Log In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I enter \"P@ssword-1\" into the password column", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
- testRunner.Then("I should be logged in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I click the Log In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
+ testRunner.Then("I should be logged in to the system", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 17
  testRunner.And("I should not see Sign In", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

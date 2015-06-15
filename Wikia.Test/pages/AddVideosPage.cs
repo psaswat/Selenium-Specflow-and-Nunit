@@ -25,10 +25,10 @@ namespace Wikia.Test.Pages
             VideoURLBox.SendKeys(p0);
         }
 
-        public VideosPage ClickOnAddButton()
+        public AddVideosPage ClickOnAddButton()
         {
             AddButton.Click();
-            return GetInstance<VideosPage>(Driver);
+            return GetInstance<AddVideosPage>(Driver);
         }
     }
 }

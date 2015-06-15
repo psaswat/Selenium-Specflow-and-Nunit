@@ -15,8 +15,11 @@ namespace Wikia.Test.Steps
         [Given(@"I am logged into the wikia with the username ""(.*)"" and password ""(.*)""")]
         public void GivenIAmLoggedIntoTheWikiaWithTheUsernameAndPassword(string p0, string p1)
         {
-            CurrentPage = (BasePage)BasePage.LoadLoginPage(CurrentDriver, BasePage.BaseUrl);
-            CurrentPage.As<LoginPage>().DoLogin(p0,p1);
+            CurrentPage = (BasePage)BasePage.LoadIndexPage(CurrentDriver, BasePage.BaseUrl);
+            CurrentPage.As<IndexPage>().HoverOverSignInLink();
+            CurrentPage.As<IndexPage>().EnterUserName(p0);
+            CurrentPage.As<IndexPage>().EnterPassword(p1);
+            CurrentPage.As<IndexPage>().ClickLogin();
         }
 
 
@@ -30,7 +33,7 @@ namespace Wikia.Test.Steps
         [When(@"I Click on Add a video")]
         public void WhenIClickOnAddAVideo()
         {
-            CurrentPage.As<IndexPage>().SelectAddVideoFromContributeDropdown();
+            NextPage=CurrentPage.As<IndexPage>().SelectAddVideoFromContributeDropdown();
         }
 
         [When(@"I type the URL ""(.*)"" of the video in the Video URL box")]

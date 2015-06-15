@@ -5,6 +5,7 @@
 
 
 @Browser:Chrome
+@Browser:IE
 Scenario:1-Login into the QM Homework wikia
 	Given I am on the QM Homework wikia
 	And I am not logged in 

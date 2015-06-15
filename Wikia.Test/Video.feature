@@ -3,7 +3,7 @@
 	As user 
 	I want to be able to add video to Wikia
 
-@Browser:Firefox
+@Browser:Chrome
 Scenario:2-Add video to wikia page
 	Given I am logged into the wikia with the username "saswatpatnaik" and password "P@ssword-1"
 	When I Click on the contribute button
@@ -17,7 +17,7 @@ Scenario:2-Add video to wikia page
 
 	@Browser:Chrome
 	Scenario:3-Add second video to wikia page
-	Given I am logged into the wikia 
+	Given I am logged into the wikia with the username "saswatpatnaik" and password "P@ssword-1"
 	When I Click on the contribute button
 	And I Click on Add a video
 	And I type the URL "https://youtu.be/etzMjoH0rJw" of the video in the Video URL box
