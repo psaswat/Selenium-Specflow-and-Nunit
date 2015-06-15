@@ -16,6 +16,8 @@ namespace Wikia.Test.Pages
         
            
         public static string URL = "/Special:Videos";
+        public override string DefaultTitle { get { return "Videos on this wiki - QM HomeWork Wikia"; } }
+        
         [FindsBy(How = How.PartialLinkText, Using = "File:")]
         public IWebElement SuccessMessage;
 
@@ -24,7 +26,7 @@ namespace Wikia.Test.Pages
 
         [FindsBy(How = How.XPath, Using = "//*[@id='WikiaPageHeader']/div/div[1]/h1")]
         public IWebElement HeaderContainingVideoName;
-        public override string DefaultTitle { get { return "Videos on this wiki - QM HomeWork Wikia"; } }
+      
         internal void IsTextPresent(string p0)
         {
             Assert.IsTrue(IsTextOnPage(p0));

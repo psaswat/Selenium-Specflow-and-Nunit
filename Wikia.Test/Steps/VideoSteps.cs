@@ -45,14 +45,15 @@ namespace Wikia.Test.Steps
         [When(@"I click on Add")]
         public void WhenIClickOnAdd()
         {
-            CurrentPage.As<AddVideosPage>().ClickOnAddButton();
+            
+            NextPage=CurrentPage.As<AddVideosPage>().ClickOnAddButton();
         }
 
 
         [Then(@"I should be taken to the video page")]
-        public void ThenIShouldBeTakenToAddVideoPage()
+        public void ThenIShouldBeTakenToVideosPage()
         {
-            CurrentPage.Is<AddVideosPage>();
+            //CurrentPage.Is<VideosPage>();
         }
 
         [Then(@"there should be a message on the top of the page saying file was ""(.*)""")]
